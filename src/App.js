@@ -1,6 +1,6 @@
 import React from 'react';
-import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
   const expenses = [
@@ -25,17 +25,13 @@ const App = () => {
     },
   ];
 
-  const addExpensHandler = (expense) => {
-    console.log('In App.js');
-    console.log(expenses);
+  const addExpenseHandler = (data) => {
+    console.log(data);
   };
   return (
     <div>
-      <NewExpense onAddExpense={addExpensHandler} />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
-      {/* {expenses.map((n) => (
-        <ExpenseItem title={n.title} amount={n.amount} date={n.date} />
-      ))} */}
     </div>
   );
 };
